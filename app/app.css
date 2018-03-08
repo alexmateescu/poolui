@@ -41,7 +41,7 @@ a:active  {
  
 /*** Material Styles ***/
 md-card {
-  overflow: hidden;
+  overflow: scroll;
   background-color: rgb(245, 245, 245);
 }
 
