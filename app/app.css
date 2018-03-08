@@ -12,26 +12,37 @@ html, body {
   font-size:14px;
   margin: 0px;
   padding: 0px;
-  min-width: 420px;
+  min-width: 360px;
 }
 
 a {
   transition: color .4s;
-  color: #3287b3;
+  color: rgb(0, 92, 153); 
 }
 
 a:link { text-decoration: none; },
-a:visited { color: #3b98c8; }
-a:hover   { color: #3b98c8; }
+a:visited { color: rgb(64, 196, 255); } 
+a:hover   { color: rgb(64, 196, 255); }
 a:active  {
   transition: color .3s;
-  color: #007BE6;
+  color: rgb(64,196,255);
 }
 
+ .panel-subtitle {
+	 font-weight: bold;
+	 font-size: 110%;
+ }
+ 
+ .footer {
+	 text-align: center;
+	 font-size: 90%;
+	 padding-bottom: 40px;
+ }
+ 
 /*** Material Styles ***/
 md-card {
   overflow: hidden;
-  background-color: rgb(215, 215, 215);
+  background-color: rgb(245, 245, 245);
 }
 
 .md-headline {
@@ -44,7 +55,7 @@ md-sidenav {
 }
 
 md-toolbar {
-	background-color: rgb(0, 130, 130) !important;
+	background-color: rgb(0, 92, 153) !important;
 	font-size: 14px;
 }
 
@@ -53,28 +64,32 @@ md-toolbar {
 }
 
 .material-icons {
-	color: rgb(255, 160, 0);
+	color: rgb(0, 122, 204);
 }
 
 #main {
-  background: #f3f5f7;
+  background: rgb(240, 240, 240); 
 }
 
 .maintoolbar {
-  background-color: #fff;
-}
+  background-color: rgb(0, 92, 153); 
+  color: rgb(255, 255, 255);
+ }
 
+.maintoolbar span {
+
+}
 
 .statsbar md-card-title-text{
   text-align: right;
 }
 
 .statsbar md-card md-card-title {
-  padding: 12px ;
+  padding: 10px ;
 }
 
 .md-menu-toolbar {
-  background: #00796B;
+  background: rgb(0, 92, 153);
 }
 
 .md-title {
@@ -100,7 +115,7 @@ md-tooltip .md-content {
 }
 
 .sidenav {
-  background-color: #2b333e;
+  background-color: rgb(80, 109, 128);
 }
 
 .sidenav ul{
@@ -128,7 +143,7 @@ md-tooltip .md-content {
   color: rgb(66,66,66);
   text-decoration: none;
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0;
@@ -141,7 +156,7 @@ md-tooltip .md-content {
 }
 
 #content  {
-  padding: 40px;
+  padding: 10px;
 }
 
 .logo {
@@ -164,6 +179,13 @@ md-tooltip .md-content {
 		font-size: 14px;
 	}
 }	
+
+.header-logo-wrapper {
+  padding: 15px 15px;
+}
+.header-logo {
+  max-height: 100%;
+}
 
 /* HELPERS */
 .welcome p {
@@ -224,8 +246,8 @@ md-tooltip .md-content {
 
 .menu-item {
   position: relative;
-  width: 72px;
-  height: 72px;
+  width: 64px;
+  height: 64px;
   display: inline-block;
   overflow: hidden;
   margin: 0px;
@@ -234,8 +256,8 @@ md-tooltip .md-content {
   transform: translateZ(0);
   -webkit-transform: scale(0.60);
   -moz-transform:scale(0.60);
-  font-size: 72px !important;
-  color: #aeb7c2;
+  font-size: 64px !important;
+  color: #fff;
 }
 
 .valid {
