@@ -12,6 +12,11 @@
 						<span class="md-headline">{{poolStats.global.totalHashes | number}}</span>
 						<span class="md-subhead">Hashes Accepted</span>
 					</md-card-title-text>
+
+					<md-card-title-text>
+						<span class="md-headline">{{((poolStats.global.roundHashes / network.difficulty)*100).toFixed(1) | number}} %</span>
+						<span class="md-subhead">Current Effort</span>
+					</md-card-title-text>
 				</md-card-title>
 			</md-card>
 		</div>
@@ -32,6 +37,13 @@
 						     </md-tooltip>
 						</div>
 					</md-card-title-text>
+					<!-- <md-card-title-text>
+						<span class="md-headline">{{ network.difficulty / poolStats.global.hashRate | convertedTime | date:'HH:mm' }}</span>
+						<div class="md-subhead">
+					<span>Est Time Per Block</span>
+					<md-tooltip md-direction="bottom">Estimated</md-tooltip>
+					</div>
+					</md-card-title-text> -->
 				</md-card-title>
 			</md-card>
 		</div>
@@ -46,8 +58,13 @@
 						</div>
 					</md-card-title-media>
 					<md-card-title-text>
-						<span class="md-headline">{{poolStats.global.miners}}</span>
-						<span class="md-subhead">Miners Connected</span>
+						<span class="md-headline">{{xaobtc}}</span>
+						<span class="md-subhead">XAO to BTC</span>
+					</md-card-title-text>
+
+					<md-card-title-text>
+						<span class="md-headline">{{(xaobtc*btcusd).toFixed(4) | number}}</span>
+						<span class="md-subhead">XAO to USD</span>
 					</md-card-title-text>
 				</md-card-title>
 			</md-card>
@@ -60,6 +77,10 @@
 							<md-icon class="material-icons">attach_money</md-icon>
 						</div>
 					</md-card-title-media>
+					<md-card-title-text>
+                                                <span class="md-headline">{{poolStats.global.miners}}</span>
+                                                <span class="md-subhead">Miners Connected</span>
+                                        </md-card-title-text>
 					<md-card-title-text>
 						<span class="md-headline">{{poolStats.global.totalMinersPaid}}</span>
 						<span class="md-subhead">Miners Paid <a href="#/payments">({{poolStats.global.totalPayments}} Payments)</a></span>

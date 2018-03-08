@@ -4,6 +4,18 @@ app.controller('HomeCtrl', function($scope, $route, dataService, timerService) {
 
     function ticker() {
         dataService.getData("/pool/chart/hashrate/pplns", function(data){
+       
+	 $.getJSON("https://tradeogre.com/api/v1/ticker/BTC-XAO", function(data) {
+                $scope.xaobtc = (data.price * 1).toFixed(8);                                            // CRYPTONATOR XMR/USD RATE
+                //$scope.aeonweekrev = (1000/$scope.network.difficulty)*86400*7*$scope.network.value*$scope.aeonusd;
+        });
+        $.getJSON("https://api.cryptonator.com/api/ticker/btc-usd", function(data) {
+                $scope.btcusd = (data.price * 1).toFixed(7);                                             // CRYPTONATOR XMR/USD RATE
+                //$scope.etnweekrev = (1000/$scope.network.difficulty)*86400*7*$scope.network.value*$scope.etnusd;
+        });
+
+
+
             data = _.forEach(data, function(element) {
                 element.ts = new Date(element.ts);
 		element.hs = element.hs/1000000;
