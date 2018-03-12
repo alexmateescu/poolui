@@ -112,10 +112,9 @@ app.controller('DashboardCtrl', function($scope , $route, $mdDialog, $pageVisibi
                 $scope.xaobtc = (data.price * 1).toFixed(8);                                            // CRYPTONATOR XMR/USD RATE
                 //$scope.aeonweekrev = (1000/$scope.network.difficulty)*86400*7*$scope.network.value*$scope.aeonusd;
         });
-        $.getJSON("https://api.cryptonator.com/api/ticker/btc-usd", function(data) {
-                $scope.btcusd = (data.price * 1).toFixed(7);                                             // CRYPTONATOR XMR/USD RATE
-                //$scope.etnweekrev = (1000/$scope.network.difficulty)*86400*7*$scope.network.value*$scope.etnusd;
+	$.getJSON("https://api.cryptonator.com/api/ticker/btc-usd", function(data) {
+                $scope.btcusd = (data.ticker.price * 1).toFixed(8);                                             // CRYPTONATOR XMR/USD RATE
+                //$scope.etnweekrev = (1000/$scope.network.difficulty)864007$scope.network.value$scope.etnusd;
         });
-
 
 });
