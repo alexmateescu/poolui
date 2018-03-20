@@ -39,13 +39,13 @@
 						</td>
 						<td md-cell><p class="md-body-2">{{::block.height | number}}</p></td>
 						<td md-cell><p class="md-body-2">{{::block.diff | number}}</p></td>
-						<td md-cell><p ng-bind-html="::block.hash | hashToLink: 'block'"></p></td>
+						<td md-cell><p ng-bind-html="::block.hash | blockhashToLink: 'block'"></p></td>
 						<td md-cell><p class="md-body-2">{{::block.shares | number}}</p></td>
 						<td md-cell><p class="md-body-2">{{::block.luck | number:2}} %</p></td>
 						<td md-cell>
 							<md-progress-linear  md-mode="query" ng-if="!block.maturity"></md-progress-linear>
 							<p ng-if="block.maturity<0">
-								<md-icon>lock_open</md-icon> 
+								<md-icon>lock_open</md-icon>
 								<md-tooltip>
 									{{-block.maturity}} blocks ago
 								</md-tooltip>
